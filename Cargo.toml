@@ -12,7 +12,7 @@ thiserror = "1.0.58"
 
 [profile.dev]
 debug = 0
-codegen-backend = "cranelift"
+# codegen-backend = "cranelift"
 
 [profile.release]
 lto = true
