@@ -1,4 +1,5 @@
-cargo-features = ["codegen-backend"]
+# cargo-features = ["codegen-backend"]
+
 [package]
 name = "chmac"
 version = "0.1.0"
