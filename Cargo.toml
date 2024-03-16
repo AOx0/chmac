@@ -1,0 +1,23 @@
+cargo-features = ["codegen-backend"]
+[package]
+name = "chmac"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.3", features = ["derive"] }
+libc = "0.2.153"
+rand = "0.8.5"
+thiserror = "1.0.58"
+
+[profile.dev]
+debug = 0
+codegen-backend = "cranelift"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+opt-level = 3
+debug = false
+strip = true
